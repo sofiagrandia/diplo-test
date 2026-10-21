@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training de Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+
+    <section id="screen-start" class="screen card" aria-labelledby="start-title">
+      <h1 id="start-title">Training de Test</h1>
+      <p id="start-info" class="muted" role="status">Cargando preguntas…</p>
+      <button id="btn-start" class="btn primary large" type="button" disabled>Empezar</button>
+    </section>
+
+    <section id="screen-question" class="screen card" hidden aria-live="polite">
+      <header class="status-bar">
+        <div class="status-item">
+          <span class="label">Progreso</span>
+          <span id="progress" class="value">Pregunta 1 de 1</span>
+        </div>
+        <div class="status-item right">
+          <span class="label">Tiempo:</span>
+          <span id="timer" class="value mono">00:00</span>
+        </div>
+      </header>
+
+      <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-fill"></div></div>
+
+      <h2 id="question-text" class="question-text"></h2>
+      <p id="question-source" class="muted small"></p>
+
+      <div id="options" class="options" role="radiogroup" aria-label="Respuestas"></div>
+
+      <div id="feedback" class="feedback" role="status" hidden></div>
+
+      <div class="actions">
+        <button id="btn-answer" class="btn primary" type="button" disabled>Responder</button>
+        <button id="btn-next" class="btn primary" type="button" hidden>Siguiente pregunta</button>
+        <button id="btn-skip" class="btn" type="button">Saltar</button>
+        <button id="btn-finish" class="btn danger-outline" type="button">Finalizar</button>
+      </div>
+
+      <p class="hint muted small">Atajos: 1–6 elegir · Enter responder · N siguiente · S saltar · F finalizar</p>
+    </section>
+
+    <section id="screen-results" class="screen" hidden aria-labelledby="results-title">
+      <div class="card">
+        <h1 id="results-title">RESUMEN DE LA SESIÓN</h1>
+        <div id="summary-grid" class="stats-grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Estadísticas detalladas de la sesión</h2>
+        <div id="detail-grid" class="stats-grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Preguntas falladas</h2>
+        <div id="incorrect-list" class="review-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Preguntas saltadas</h2>
+        <div id="skipped-list" class="review-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Tiempo por pregunta</h2>
+        <div class="table-wrap">
+          <table id="time-table">
+            <thead>
+              <tr><th>#</th><th>Pregunta</th><th>Resultado</th><th>Inicio</th><th>Fin</th><th>Tiempo</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card actions center">
+        <button id="btn-export-json" class="btn" type="button">Exportar resultados (JSON)</button>
+        <button id="btn-export-csv" class="btn" type="button">Exportar resultados (CSV)</button>
+        <button id="btn-new" class="btn primary" type="button">Nueva sesión</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+  {
+    "number": 84,
+    "question": "Señale la única respuesta correcta acerca de los Premios Nobel:",
+    "options": [
+      "Santiago Ramón y Cajal obtuvo el Premio Nobel de Medicina en 1904 en reconocimiento a su trabajo sobre la estructura del sistema nervioso conjuntamente con Giosuè Carducci.",
+      "La Academia Sueca otorgó el Premio Nobel de Literatura a Benito Pérez Galdós, autor de Miau.",
+      "Santiago Ramón y Cajal obtuvo el Premio Nobel de Fisiología o Medicina en 1906 en reconocimiento a su trabajo sobre la estructura del sistema nervioso conjuntamente con Camillo Golgi.",
+      "La Academia Sueca no otorgó el Premio Nobel de Literatura a Vicente Aleixandre, autor de Doña Perfecta."
+    ],
+    "boldCandidates": [
+      2
+    ],
+    "reason": "Partially bold option text",
+    "source": "TEST 2024.pdf"
+  }
+]

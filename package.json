@@ -1,0 +1,12 @@
+{
+  "name": "test-trainer",
+  "version": "1.0.0",
+  "description": "Static multiple-choice exam practice website with a PDF question extractor",
+  "private": true,
+  "scripts": {
+    "extract": "node extract-questions.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "pdfjs-dist": "^4.10.38" },
+  "license": "MIT"
+}
